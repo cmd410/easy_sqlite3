@@ -169,7 +169,7 @@ type ResultCode* {.pure.} = enum
   sr_ioerr_data              = 8202
 
 type SQLiteError* = object of CatchableError
-  code: Option[ResultCode]
+  code*: Option[ResultCode]
 
 type SQLiteBlob* = object
   raw: ptr UncheckedArray[byte]
